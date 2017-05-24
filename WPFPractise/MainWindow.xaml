@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFPractise"
         mc:Ignorable="d"
-        Title="MainWindow" Height="300" Width="300">
-    <Grid>
-        
+        Title="MainWindow" Height="300" Width="500">
+    <Grid Margin="10, 20, 30, 40">
+        <Border Background="Blue" BorderBrush="Silver" BorderThickness="5" Name="border1" Padding="0, 10, 0, 0" CornerRadius="8" >
+            <StackPanel Name="stackPanel1" Orientation="Vertical">
+                <Label Content="Label" Height="28" Name="label1"/>
+                <Button Content="Button" Height="23" Name="button1" Width="75" />
+                <Button Content="Button" Height="23" Name="button2" Width="75" />
+                <Button Content="Button" Height="23" Name="button3" Width="75" />
+                <Button Content="Button" Height="23" Name="button4" Width="75" />
+
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>

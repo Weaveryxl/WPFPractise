@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFPractise", "WPFPractise\WPFPractise.csproj", "{84950379-96E5-4B95-88F8-AFA53912CCA3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFPractice2", "WPFPractice2\WPFPractice2.csproj", "{646AA9AC-AA08-4494-BD4B-8F58CA535E7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{84950379-96E5-4B95-88F8-AFA53912CCA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{84950379-96E5-4B95-88F8-AFA53912CCA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{84950379-96E5-4B95-88F8-AFA53912CCA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{84950379-96E5-4B95-88F8-AFA53912CCA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{646AA9AC-AA08-4494-BD4B-8F58CA535E7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{646AA9AC-AA08-4494-BD4B-8F58CA535E7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{646AA9AC-AA08-4494-BD4B-8F58CA535E7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{646AA9AC-AA08-4494-BD4B-8F58CA535E7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

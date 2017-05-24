@@ -10,19 +10,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WPFPractise
 {
     /// <summary>
-    /// Interaction logic for Page1.xaml
+    /// Interaction logic for App.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class App : Application
     {
-        public Page1()
-        {
-            InitializeComponent();
-        }
+        
     }
 }

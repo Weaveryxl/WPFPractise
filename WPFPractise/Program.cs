@@ -14,7 +14,7 @@ namespace WPFPractise
         static void Main()
         {
             Program app = new Program();
-            app.MainWindow = new window1();
+            app.MainWindow = new MainWindow("Window1.xaml");
             app.MainWindow.ShowDialog();
         }
     }

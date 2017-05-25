@@ -55,5 +55,28 @@ namespace WPFPractice2
         {
             myButton.Content = "Thank you.";
         }
+
+        private void KeyEvent(object sender, KeyEventArgs e)
+        {
+            string message = "Event: " + e.RoutedEvent + "  " + "Key: " + e.Key;
+            this.lstMessage.Items.Add(message);
+        }
+
+        private void txtInput(object sender, TextCompositionEventArgs e)
+        {
+            string message = "Event: " + e.RoutedEvent + "  " + "Text: " + e.Text;
+            this.lstMessage.Items.Add(message);
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string message = "Event: " + e.RoutedEvent;
+            this.lstMessage.Items.Add(message);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.lstMessage.Items.Clear();
+        }
     }
 }

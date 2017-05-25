@@ -5,22 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFPractice2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="300" Width="500">
-    <Grid ShowGridLines="False" UseLayoutRounding="True">
+        Title="MainWindow" Height="500" Width="300">
+    <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" MinWidth="50"></ColumnDefinition>
-            <ColumnDefinition Width="auto"></ColumnDefinition>
-            <ColumnDefinition Width="*" MinWidth="50"></ColumnDefinition>
-            <ColumnDefinition Width="2*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Button Content="LeftTop" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Margin="3" />
-        <Button Content="CenterTop" Grid.Row="0" Grid.Column="2" Margin="3"/>
-        <Button Content="RightBottom" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Margin="3"/>
-        <GridSplitter x:Name="gridSplitter" Grid.Column="1" Width="3" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Center" />
+        <DockPanel Margin="5">
+            <TextBlock Margin="3">
+                Type here:
+            </TextBlock>
+            <TextBox Focusable="True" TabIndex="0" PreviewKeyDown="KeyEvent" KeyDown="KeyEvent" PreviewTextInput="txtInput" PreviewKeyUp="KeyEvent" TextChanged="TextBox_TextChanged"></TextBox>
+        </DockPanel>
+        <ListBox Margin="5" Name="lstMessage" Grid.Row="1"></ListBox>
+        <Button Grid.Row="2" TabIndex="1" HorizontalAlignment="Right" Margin="5" Padding="3" Click="Button_Click">Clear List</Button>
     </Grid>
-
 </Window>

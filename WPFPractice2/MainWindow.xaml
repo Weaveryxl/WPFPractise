@@ -6,12 +6,21 @@
         xmlns:local="clr-namespace:WPFPractice2"
         mc:Ignorable="d"
         Title="MainWindow" Height="300" Width="500">
-    <DockPanel Name="dockPanel1" LastChildFill="True">
-        <Button x:Name="button2" DockPanel.Dock="Top" Content="Top Button" Height="23" />
-        <Button x:Name="button3" DockPanel.Dock="Bottom" Content="bottom Button" />
-        <Button x:Name="button1" DockPanel.Dock="Left" Content="Left Button" Width="75" />
-        <Button x:Name="button5" DockPanel.Dock="Right" Content="Right Button" Width="75" />
-        <Button x:Name="button4" Content="Remaining Space" />
-    </DockPanel>
+    <Grid ShowGridLines="False" UseLayoutRounding="True">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" MinWidth="50"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="*" MinWidth="50"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Content="LeftTop" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Margin="3" />
+        <Button Content="CenterTop" Grid.Row="0" Grid.Column="2" Margin="3"/>
+        <Button Content="RightBottom" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Margin="3"/>
+        <GridSplitter x:Name="gridSplitter" Grid.Column="1" Width="3" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Center" />
+    </Grid>
 
 </Window>

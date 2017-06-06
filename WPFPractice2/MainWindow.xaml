@@ -5,20 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFPractice2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="300">
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-        </Grid.RowDefinitions>
-        <DockPanel Margin="5">
-            <TextBlock Margin="3">
-                Type here:
-            </TextBlock>
-            <TextBox Focusable="True" TabIndex="0" PreviewKeyDown="KeyEvent" KeyDown="KeyEvent" PreviewTextInput="txtInput" PreviewKeyUp="KeyEvent" TextChanged="TextBox_TextChanged"></TextBox>
-        </DockPanel>
-        <ListBox Margin="5" Name="lstMessage" Grid.Row="1"></ListBox>
-        <Button Grid.Row="2" TabIndex="1" HorizontalAlignment="Right" Margin="5" Padding="3" Click="Button_Click">Clear List</Button>
+        <Button Height="23" Name="button1" >Button</Button>
+        <Button Height="23" Name="button2">
+            <Image Source="/"
+        </Button>
     </Grid>
 </Window>

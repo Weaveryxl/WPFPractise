@@ -25,58 +25,19 @@ namespace WPFPractice2
         /// <summary>
         /// MainWindow.xaml logic for interaction
         /// </summary>
-        private Button myButton;
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        public MainWindow(string xamlFile)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //Setup window
-            this.Width = this.Height = 285;
-            this.Left = this.Top = 100;
-            this.Title = "Dynamically Loaded XAML.";
-
-            //Get XAML from external file
-            DependencyObject rootElement;
-            using (FileStream fs = new FileStream(xamlFile, FileMode.Open))
+            foreach (FontFamily fontFamily in Fonts.SystemFontFamilies)
             {
-                rootElement = (DependencyObject)XamlReader.Load(fs);
+                this.listbox1.Items.Add(fontFamily.Source);
+                this.Cursor = Cursors.Wait;
             }
-            this.Content = rootElement;
-
-            myButton = (Button)LogicalTreeHelper.FindLogicalNode(rootElement, "button1");
-            myButton.Click += myButton_Click;
-        }
-
-        private void myButton_Click(object sender, RoutedEventArgs e)
-        {
-            myButton.Content = "Thank you.";
-        }
-
-        private void KeyEvent(object sender, KeyEventArgs e)
-        {
-            string message = "Event: " + e.RoutedEvent + "  " + "Key: " + e.Key;
-            this.lstMessage.Items.Add(message);
-        }
-
-        private void txtInput(object sender, TextCompositionEventArgs e)
-        {
-            string message = "Event: " + e.RoutedEvent + "  " + "Text: " + e.Text;
-            this.lstMessage.Items.Add(message);
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            string message = "Event: " + e.RoutedEvent;
-            this.lstMessage.Items.Add(message);
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.lstMessage.Items.Clear();
         }
     }
 }

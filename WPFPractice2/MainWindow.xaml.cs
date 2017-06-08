@@ -31,18 +31,25 @@ namespace WPFPractice2
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void button1_Click_1(object sender, RoutedEventArgs e)
         {
-            foreach (FontFamily fontFamily in Fonts.SystemFontFamilies)
-            {
-                //this.listbox1.Items.Add(fontFamily.Source);
-                //this.Cursor = Cursors.Wait;
-            }
+            this.scrollViewer1.LineUp();
+            //this.scrollViewer1.PageUp();
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void button2_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("isCancel");
+            this.scrollViewer1.LineDown();
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            this.scrollViewer1.ScrollToEnd();
+        }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            this.scrollViewer1.ScrollToHome();
         }
     }
 }

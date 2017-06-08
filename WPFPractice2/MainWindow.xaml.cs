@@ -35,9 +35,14 @@ namespace WPFPractice2
         {
             foreach (FontFamily fontFamily in Fonts.SystemFontFamilies)
             {
-                this.listbox1.Items.Add(fontFamily.Source);
-                this.Cursor = Cursors.Wait;
+                //this.listbox1.Items.Add(fontFamily.Source);
+                //this.Cursor = Cursors.Wait;
             }
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("isCancel");
         }
     }
 }

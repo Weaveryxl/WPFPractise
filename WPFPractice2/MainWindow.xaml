@@ -7,9 +7,48 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
     <Grid>
-        <Button Height="23" Name="button1" >Button</Button>
-        <Button Height="23" Name="button2">
-            <Image Source="/"
-        </Button>
+        <StackPanel>
+            <Button ToolTip="This is a ToolTip" Height="23" Name="button1" Margin="3" IsDefault="True" IsCancel="True" Click="button1_Click" >Button</Button>
+            <Button Height="45" Name="button2" Margin="3">
+                <Button.ToolTip>
+                    <ToolTip Background="Coral" Placement="Absolute" HorizontalOffset="25" VerticalOffset="50">
+                        <StackPanel>
+                            <TextBlock>
+                            Image and text
+                            </TextBlock>
+                            <Image Source="Image\doge.jpg"/>
+                        </StackPanel>
+                    </ToolTip>
+                </Button.ToolTip>
+                <Button.Content>
+                    <Image Source="/WPFPractice2;component/Image/doge.jpg" />
+                </Button.Content>
+                
+            </Button>
+            <Button Name="button3">
+                <StackPanel>
+                    <TextBlock>
+                        Image and text button
+                    </TextBlock>
+                    <Image Source="Image/doge.jpg" Height="41" Width="292"></Image>
+                    <TextBlock>
+                        Courtesy of the StackPanel
+                    </TextBlock>
+                    <RadioButton Height="16" Content="RadioButton3" Name="radioButton3"/>
+                    <RadioButton Height="16" Content="RadioButton4GroupRdo" Name="radioButton4" GroupName="rdo"/>
+                    <RadioButton Height="16" Content="RadioButton5" Name="radioButton5"/>
+                </StackPanel>
+            </Button>
+            <Label Target="{Binding ElementName=textBox1}" Height="28" Name="label1">Choose _A</Label>
+            <TextBox Name="textBox1" Height="23" TextWrapping="Wrap" Margin="3"></TextBox>
+            <CheckBox Content="CheckBox" Height="16" Name="checkBox1" IsChecked="{x:Null}" IsThreeState="True"/>
+            <CheckBox Content="CheckBox" Height="16" Name="checkBox2" IsThreeState="True"/>
+            <RadioButton Height="16" Content="RadioButton1" Name="radioButton1"/>
+            <RadioButton Height="16" Content="RadioButton2GroupRdo" Name="radioButton2" GroupName="rdo"/>
+            <RadioButton Height="16" Content="RadioButton6" Name="radioButton6"/>
+        </StackPanel>
+        
+            
+        
     </Grid>
 </Window>
